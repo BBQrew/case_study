@@ -1,7 +1,5 @@
 # creating model classes and dependent policies
 
-# 1 Job and JobPolicies
-
 ```make:model``` Create a new Eloquent model class
 
 ```make:policy``` Create a new policy class
@@ -12,7 +10,9 @@
 - ```--controller``` Create a new controller for the model
 - ```--resource``` Indicates if the generated controller should be a resource controller
 
-## 1.1 create model class "Job"
+## 1 Job and JobPolicies
+
+### 1.1 create model class "Job"
 
 > php artisan make:model Job -mcr
 
@@ -20,7 +20,7 @@
     Created Migration: 2022_01_25_143055_create_jobs_table
     Controller created successfully.
 
-## 1.2 create policy class "JobPolicy" for model class "Job"
+### 1.2 create policy class "JobPolicy" for model class "Job"
 
 > php artisan make:policy JobPolicy -model:Job
 
@@ -28,7 +28,7 @@ doesn't work
 
     Too many arguments to "make:policy" command, expected arguments "name".
 
-### 1.2.1 use instead
+#### 1.2.1 use instead
 
 > php artisan make:policy JobPolicy -m=Job
 
@@ -36,7 +36,9 @@ does the job
 
     Policy created successfully.
 
-## 1.3 create model class "Company"
+## 2 Company and CompanyPolicy
+
+### 2.1 create model class "Company"
 
 > php artisan make:model Company -mcr
 
@@ -44,7 +46,7 @@ does the job
     Created Migration: 2022_01_26_091248_create_companies_table
     Controller created successfully.
 
-## 1.4 create policy class "CompanyPolicy" for model class "Company"
+### 2.2 create policy class "CompanyPolicy" for model class "Company"
 
 > php artisan make:policy CompanyPolicy -m=Company
 
