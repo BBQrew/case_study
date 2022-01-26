@@ -69,6 +69,8 @@ companies:jobs is 1:n
 
 companies:users is m:n
 
+mermaid diagram:
+
 ```mermaid
 classDiagram
 companies -- jobs : 1 to n
@@ -86,5 +88,6 @@ class users{
 id
 name
 }
-
 ```
+
+![](mermaid-diagram.png)
